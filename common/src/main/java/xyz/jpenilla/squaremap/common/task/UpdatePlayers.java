@@ -89,7 +89,7 @@ public final class UpdatePlayers implements Runnable {
                 if (worldConfig.PLAYER_TRACKER_USE_DISPLAY_NAME) {
                     playerEntry.put("display_name", htmlComponentSerializer.serialize(this.playerManager.displayName(player)));
                 }
-                playerEntry.put("uuid", player.getUUID().toString().replace("-", ""));
+                playerEntry.put("uuid", player.getUUID().toString());
                 playerEntry.put("world", Util.levelWebName(world));
                 if (worldConfig.PLAYER_TRACKER_ENABLED) {
                     playerEntry.put("x", Mth.floor(playerLoc.x()));
